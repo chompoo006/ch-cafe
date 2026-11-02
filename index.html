@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CH Cafe</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Tahoma, sans-serif;
+    background: #f5f3e9;
+    color: #304b35;
+}
+
+/* เมนูด้านบน */
+header {
+    background: #244b35;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* หน้าปก */
+.banner {
+    height: 500px;
+    background:
+    linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
+    url('https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=1600')
+    center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.banner h1 {
+    font-size: 55px;
+}
+
+.banner p {
+    font-size: 20px;
+    margin: 15px;
+}
+
+.btn {
+    background: #a6b98b;
+    color: #203b2b;
+    padding: 13px 30px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-top: 15px;
+}
+
+/* หัวข้อ */
+section {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #31563b;
+}
+
+.description {
+    margin-bottom: 30px;
+}
+
+/* รูปหน้าร้าน */
+.store img {
+    width: 100%;
+    max-width: 850px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* เมนูเครื่องดื่ม */
+.menu {
+    background: #e8ecdf;
+}
+
+.menu-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 12px #00000015;
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 15px;
+}
+
+.price {
+    color: #66844f;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* เกี่ยวกับร้าน */
+.about {
+    line-height: 2;
+}
+
+/* ท้ายเว็บ */
+footer {
+    background: #244b35;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+@media(max-width:600px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav a {
+        margin: 5px;
+        font-size: 13px;
+    }
+    .banner h1 {
+        font-size: 35px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">CH 🌿</div>
+    <nav>
+        <a href="#home">หน้าหลัก</a>
+        <a href="#store">หน้าร้าน</a>
+        <a href="#menu">เมนู</a>
+        <a href="#about">เกี่ยวกับเรา</a>
+    </nav>
+</header>
+
+<!-- หน้าปก -->
+<div class="banner" id="home">
+    <div>
+        <h1>CHO CAFE</h1>
+        <p>สัมผัสธรรมชาติ พร้อมจิบกาแฟแก้วโปรด</p>
+        <a href="#menu" class="btn">ดูเมนูเครื่องดื่ม</a>
+    </div>
+</div>
+
+<!-- หน้าร้าน -->
+<section class="store" id="store">
+    <h2>Our Cafe 🌿</h2>
+    <p class="description">
+        คาเฟ่เล็ก ๆ ท่ามกลางธรรมชาติ บรรยากาศอบอุ่นและร่มรื่น
+    </p>
+
+    <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=1200"
+    alt="บรรยากาศคาเฟ่">
+</section>
+
+<!-- เมนู -->
+<section class="menu" id="menu">
+    <h2>Our Drinks ☕</h2>
+    <p class="description">เครื่องดื่มสดใหม่ พร้อมเสิร์ฟทุกวัน</p>
+
+    <div class="menu-list">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=800"
+            alt="ลาเต้เย็น">
+            <h3>Iced Latte</h3>
+            <p>กาแฟลาเต้เย็น หอมละมุน</p>
+            <p class="price">65 บาท</p>
+        </div>
+
+
+        <div class="card">
+            <img src="images/sa.jpg" alt="สปาเก็ตตี้">
+            <alt="สปาเก็ตตี้">
+            <h3>Iced Latte</h3>
+            <p>สปาเก็ตตี้ อร่อยๆ</p>
+            <p class="price">79 บาท</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1515823064-d6e0c04616a7?w=800"
+            alt="มัทฉะ">
+            <h3>Matcha Latte</h3>
+            <p>มัทฉะเข้มข้น หอมกลิ่นชาเขียว</p>
+            <p class="price">75 บาท</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=800"
+            alt="กาแฟ">
+            <h3>Americano</h3>
+            <p>กาแฟดำ รสชาติเข้มข้น</p>
+            <p class="price">55 บาท</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800"
+            alt="ชาเย็น">
+            <h3>Thai Tea</h3>
+            <p>ชาไทยหอมหวาน กลมกล่อม</p>
+            <p class="price">50 บาท</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- เกี่ยวกับร้าน -->
+<section class="about" id="about">
+    <h2>About CH Nature Cafe</h2>
+    <p>
+        CH Cafe คือคาเฟ่ที่อยากให้ทุกคนได้พักผ่อน
+        ท่ามกลางบรรยากาศธรรมชาติ
+        พร้อมเครื่องดื่มที่คัดสรรมาอย่างดี
+        เพื่อสร้างช่วงเวลาที่แสนพิเศษให้กับคุณ
+    </p>
+</section>
+
+<footer>
+    <h2 style="color:white;">CH Nature Cafe 🌿</h2>
+    <p>เปิดทุกวัน 08.00 - 18.00 น.</p>
+    <p>ขอบคุณที่แวะมาเยี่ยมชมร้านของเรา</p>
+    <p>CH Cafe</p>
+</footer>
+
+</body>
+</html>
